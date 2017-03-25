@@ -43,4 +43,12 @@ func TestDijkstra(t *testing.T) {
 	if !reflect.DeepEqual(expected, result) {
 		t.Fatalf("Expected: %v\nGot: %v", expected, result)
 	}
+
+	result = Dijkstra(graph, 1)
+	expected = []int{7, 0, 10, 15, 21, 12}
+
+	if !reflect.DeepEqual(expected, result) {
+		t.Fatalf("Expected: %v\nGot: %v", expected, result)
+	}
+
 }

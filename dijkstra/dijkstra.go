@@ -53,12 +53,6 @@ func (pq *priorityQueue) Pop() interface{} {
 //
 // returns array of path lengths from given node with index `start` to any other node
 func Dijkstra(graph [][][2]int, start int) []int {
-	// result := make([]int, len(graph))
-	// for i := range result {
-	// 	result[i] = inf
-	// }
-	// result[start] = 0
-
 	pq := make(priorityQueue, len(graph))
 	ref := make([]*pqItem, len(graph))
 	for i := range pq {

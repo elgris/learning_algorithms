@@ -1,4 +1,4 @@
-package dijkstra
+package sort
 
 func Mergesort(input []int) {
 	buffer := make([]int, len(input))

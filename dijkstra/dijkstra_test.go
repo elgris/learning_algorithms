@@ -1,7 +1,9 @@
 package dijkstra
 
-import "testing"
-import "reflect"
+import (
+	"reflect"
+	"testing"
+)
 
 func TestDijkstra(t *testing.T) {
 	graph := [][][2]int{

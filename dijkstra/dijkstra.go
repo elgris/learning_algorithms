@@ -2,6 +2,8 @@ package dijkstra
 
 import (
 	"container/heap"
+
+	"github.com/kr/pretty"
 )
 
 const inf = 1 << 30
@@ -35,6 +37,7 @@ func (pq *priorityQueue) Push(x interface{}) {
 }
 
 func (pq *priorityQueue) Pop() interface{} {
+	pretty.Println(pq)
 	old := *pq
 	n := len(old)
 	item := old[n-1]

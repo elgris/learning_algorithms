@@ -3,6 +3,8 @@ package dijkstra
 import (
 	"reflect"
 	"testing"
+
+	"github.com/kr/pretty"
 )
 
 func TestDijkstra(t *testing.T) {
@@ -41,7 +43,7 @@ func TestDijkstra(t *testing.T) {
 
 	result := Dijkstra(graph, 0)
 	expected := []int{0, 7, 9, 20, 20, 11}
-
+	pretty.Println(graph)
 	if !reflect.DeepEqual(expected, result) {
 		t.Fatalf("Expected: %v\nGot: %v", expected, result)
 	}
